@@ -1,0 +1,17 @@
+@import "../../theme-variables";
+
+.form-checkbox-wrapper {
+  margin: 0 0 10px;
+  .form-check-element {
+    margin: 0 4px;
+  }
+  .form-check-label {
+    font-size: 14px;
+    color: $grey;
+    padding: 0px 8px;
+    line-height: 1;
+  }
+  &.disabled {
+    opacity: 0.6;
+  }
+}

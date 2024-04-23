@@ -1,6 +1,7 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.scss";
 import ButtonPage from "./pages/ButtonPage";
+import FormPage from "./pages/FormPage/FormPage";
 import HomePage from "./pages/HomePage";
 import RootLayout from "./pages/RootLayout";
 
@@ -13,6 +14,10 @@ const routes = createBrowserRouter([
       {
         path: "/button",
         element: <ButtonPage />,
+      },
+      {
+        path: "/checkbox",
+        element: <FormPage />,
       },
     ],
   },
