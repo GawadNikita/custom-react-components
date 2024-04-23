@@ -1,0 +1,21 @@
+@import "../../theme-variables";
+
+.btn {
+  cursor: pointer;
+  padding: 6px 12px;
+  color: $white;
+  background-color: $black;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 6px;
+  font-size: 12px;
+  display: inline-block;
+  &.btn-primary {
+    background-color: $primary;
+  }
+
+  &.btn-disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
