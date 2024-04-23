@@ -3,11 +3,13 @@ interface ButtonProps {
   variant: string;
   label: string;
   disabled?: boolean;
+  size?: string;
 }
 
 const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
-  const isBtnDisabled = props.disabled ? "btn-disabled" : "";
-  let classNames = `btn btn-${props.variant} ${isBtnDisabled}`;
+  const btnDisabledClass = props.disabled ? "btn-disabled" : "";
+  const btnSizeClass = props.size === "lg" ? "btn-lg" : "";
+  let classNames = `btn btn-${props.variant} ${btnDisabledClass} ${btnSizeClass}`;
 
   return (
     <button type="button" className={classNames} disabled={props.disabled}>

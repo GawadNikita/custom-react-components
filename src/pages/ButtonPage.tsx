@@ -6,19 +6,24 @@ const ButtonPage: React.FC = () => {
     <>
       <h2>Buttons</h2>
       <div>
-        <h4>Example 1 | Primary Button</h4>
+        <h4>Example for Button themes</h4>
         <Button variant="primary" label="Primary" />
-      </div>
-
-      <div>
-        <h4>Example 2 | Secondary Button</h4>
         <Button variant="secondary" label="Secondary" />
+        <Button variant="no-theme" label="Plain Button" />
       </div>
 
       <div>
-        <h4>Example 3 | Disabled Button</h4>
+        <h4>Example for disabled button</h4>
         <Button variant="primary" disabled label="Primary" />
         <Button variant="secondary" disabled label="Secondary" />
+        <Button variant="no-theme" disabled label="Plain Button" />
+      </div>
+
+      <div>
+        <h4>Example for button size</h4>
+        <Button variant="primary" label="Primary" size="lg" />
+        <Button variant="secondary" label="Secondary" size="lg" />
+        <Button variant="no-theme" label="Plain Button" size="lg" />
       </div>
     </>
   );
