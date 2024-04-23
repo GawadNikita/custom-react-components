@@ -8,9 +8,11 @@
     margin: 0 0 5px;
     a {
       cursor: pointer;
-      color: $white;
+      color: $black;
+      text-decoration: none;
       &.active {
         color: $primary;
+        text-decoration: underline;
       }
     }
   }
@@ -22,8 +24,9 @@
     height: 100vh;
     overflow-y: auto;
     width: 300px;
-    background-color: $light-grey;
+    background-color: $white;
     padding: 30px 20px;
     z-index: 2;
+    border-right: 1px solid $light-grey;
   }
 }

@@ -7,6 +7,7 @@ const SideNavigation: React.FC = () => {
   };
   return (
     <aside className="sidebar-container">
+      <h2>Components</h2>
       <nav>
         <ul className="side-nav-list">
           <li>

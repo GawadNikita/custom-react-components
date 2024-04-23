@@ -1,16 +1,19 @@
-import './Button.scss';
-interface ButtonProps{
+import "./Button.scss";
+interface ButtonProps {
   variant: string;
   label: string;
-  disabled?: boolean
+  disabled?: boolean;
 }
 
-const Button:React.FC<ButtonProps>=(props: ButtonProps) =>{
-  const isBtnDisabled =  props.disabled ?'btn-disabled': '';
-  let classNames = `btn btn-${props.variant} ${isBtnDisabled}` 
-  console.log(props);
-  
-return <button type='button' className={classNames} disabled={props.disabled}>{props.label}</button>
-}
+const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
+  const isBtnDisabled = props.disabled ? "btn-disabled" : "";
+  let classNames = `btn btn-${props.variant} ${isBtnDisabled}`;
 
-export default Button
+  return (
+    <button type="button" className={classNames} disabled={props.disabled}>
+      {props.label}
+    </button>
+  );
+};
+
+export default Button;
