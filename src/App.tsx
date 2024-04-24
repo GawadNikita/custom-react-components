@@ -3,15 +3,15 @@ import "./App.scss";
 import ButtonPage from "./pages/ButtonPage";
 import HomePage from "./pages/HomePage";
 import RootLayout from "./pages/RootLayout";
-
+import { ROUTES } from "./routes.constant";
 const routes = createBrowserRouter([
   {
-    path: "/",
+    path: ROUTES.HOME.url,
     element: <RootLayout />,
     children: [
       { index: true, element: <HomePage /> },
       {
-        path: "/button",
+        path: ROUTES.COMPONENTS.BUTTON.url,
         element: <ButtonPage />,
       },
     ],
