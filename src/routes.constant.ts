@@ -1,6 +1,7 @@
 export const ROUTES = {
   HOME: { title: 'Home', url: '/' },
   COMPONENTS: {
-    BUTTON: { title: 'Buttons', url: 'components/buttons' }
+    groupId: 'component',
+    BUTTON: { title: 'Buttons', url: 'component/button', pageId: 'button' }
   }
 }

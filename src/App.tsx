@@ -1,6 +1,7 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.scss";
 import ButtonPage from "./pages/ButtonPage";
+import ComponentsLayout from "./pages/ComponentsLayout";
 import HomePage from "./pages/HomePage";
 import RootLayout from "./pages/RootLayout";
 import { ROUTES } from "./routes.constant";
@@ -11,8 +12,15 @@ const routes = createBrowserRouter([
     children: [
       { index: true, element: <HomePage /> },
       {
-        path: ROUTES.COMPONENTS.BUTTON.url,
-        element: <ButtonPage />,
+        path: ROUTES.COMPONENTS.groupId,
+        element: <ComponentsLayout />,
+        children: [
+          {
+            index: true,
+            path: ROUTES.COMPONENTS.BUTTON.pageId,
+            element: <ButtonPage />,
+          },
+        ],
       },
     ],
   },
