@@ -3,6 +3,7 @@ import "./App.scss";
 import ButtonPage from "./pages/ButtonPage";
 import ComponentsLayout from "./pages/ComponentsLayout";
 import HomePage from "./pages/HomePage";
+import NavbarPage from "./pages/NavbarPage";
 import RootLayout from "./pages/RootLayout";
 import { ROUTES } from "./routes.constant";
 const routes = createBrowserRouter([
@@ -19,6 +20,10 @@ const routes = createBrowserRouter([
             index: true,
             path: ROUTES.COMPONENTS.BUTTON.pageId,
             element: <ButtonPage />,
+          },
+          {
+            path: ROUTES.COMPONENTS.NAVBAR.pageId,
+            element: <NavbarPage />,
           },
         ],
       },
