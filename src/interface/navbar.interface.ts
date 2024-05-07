@@ -5,7 +5,7 @@
 export interface NavbarInterface {
   theme: string;
   linksToRight?: boolean;
-  children?: NavLinksInterface; // type to be corrected here
+  children?: any;
 }
 
 export interface NavLinksInterface {
@@ -15,7 +15,17 @@ export interface NavLinksInterface {
   children?: any;
 }
 
-export interface NavbarDropdown {
+export interface NavbarDropdownInterface {
   title: string;
   children?: any;
+}
+
+export interface NavbarLogoInterface {
+  logoSrc: string;
+  altText?: string;
+  title?: string;
+}
+
+export interface NavInterface {
+  children: JSX.Element[]
 }

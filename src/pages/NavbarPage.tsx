@@ -1,4 +1,6 @@
+import Nav from "../components/Navbar/Nav";
 import Navbar from "../components/Navbar/Navbar";
+import NavbarBrand from "../components/Navbar/NavbarBrand";
 import NavbarDropDown from "../components/Navbar/NavbarDropDown";
 import NavbarLinks from "../components/Navbar/NavbarLinks";
 // import { NavbarContextProvider } from "../components/Navbar/Navbar.Context";
@@ -12,19 +14,31 @@ function NavbarPage() {
         <h3>Setting theme</h3>
         <p>theme:string = 'light' | 'dark'</p>
         <Navbar theme="light">
-          <NavbarLinks url="/" title="Home" />
-          <NavbarLinks
-            url={ROUTES.COMPONENTS.BUTTON.url}
-            title={ROUTES.COMPONENTS.BUTTON.title}
+          <NavbarBrand
+            logoSrc="https://placehold.co/90x35?text=Brand+Logo"
+            altText="Brand logo"
           />
+          <Nav>
+            <NavbarLinks url="/" title="Home" />
+            <NavbarLinks
+              url={ROUTES.COMPONENTS.BUTTON.url}
+              title={ROUTES.COMPONENTS.BUTTON.title}
+            />
+          </Nav>
         </Navbar>
 
         <Navbar theme="dark">
-          <NavbarLinks url="/" title="Home" />
-          <NavbarLinks
-            url={ROUTES.COMPONENTS.BUTTON.url}
-            title={ROUTES.COMPONENTS.BUTTON.title}
+          <NavbarBrand
+            logoSrc="https://placehold.co/90x35?text=Brand+Logo"
+            altText="Brand logo"
           />
+          <Nav>
+            <NavbarLinks url="/" title="Home" />
+            <NavbarLinks
+              url={ROUTES.COMPONENTS.BUTTON.url}
+              title={ROUTES.COMPONENTS.BUTTON.title}
+            />
+          </Nav>
         </Navbar>
       </div>
 
@@ -32,11 +46,17 @@ function NavbarPage() {
         <h3>Aligning the links</h3>
         <p>linksToRight?: boolean</p>
         <Navbar theme="light" linksToRight>
-          <NavbarLinks url="/" title="Home" />
-          <NavbarLinks
-            url={ROUTES.COMPONENTS.BUTTON.url}
-            title={ROUTES.COMPONENTS.BUTTON.title}
+          <NavbarBrand
+            logoSrc="https://placehold.co/90x35?text=Brand+Logo"
+            altText="Brand logo"
           />
+          <Nav>
+            <NavbarLinks url="/" title="Home" />
+            <NavbarLinks
+              url={ROUTES.COMPONENTS.BUTTON.url}
+              title={ROUTES.COMPONENTS.BUTTON.title}
+            />
+          </Nav>
         </Navbar>
       </div>
 
@@ -44,44 +64,29 @@ function NavbarPage() {
         <div>
           <h3>Navbar with dropdown</h3>
           <Navbar theme="light">
-            <NavbarLinks url="/" title="Home" />
-            <NavbarLinks
-              url={ROUTES.COMPONENTS.BUTTON.url}
-              title={ROUTES.COMPONENTS.BUTTON.title}
+            <NavbarBrand
+              logoSrc="https://placehold.co/90x35?text=Brand+Logo"
+              altText="Brand logo"
             />
-            <NavbarDropDown title="Dropdown">
-              <NavbarLinks url="/" title="Option 1" />
+            <Nav>
+              <NavbarLinks url="/" title="Home" />
               <NavbarLinks
                 url={ROUTES.COMPONENTS.BUTTON.url}
-                title="Option 2"
+                title={ROUTES.COMPONENTS.BUTTON.title}
               />
-              <NavbarLinks url="/" title="Option 3" />
-            </NavbarDropDown>
-            <NavbarLinks
-              url={ROUTES.COMPONENTS.BUTTON.url}
-              title="Another link"
-            />
-          </Navbar>
-
-          <Navbar theme="dark">
-            <NavbarLinks url="/" title="Home" />
-            <NavbarLinks
-              url={ROUTES.COMPONENTS.BUTTON.url}
-              title={ROUTES.COMPONENTS.BUTTON.title}
-            />
-            <NavbarDropDown title="Dropdown">
-              <NavbarLinks url="/" title="Option 1" />
+              <NavbarDropDown title="Dropdown">
+                <NavbarLinks url="/" title="Option 1" />
+                <NavbarLinks
+                  url={ROUTES.COMPONENTS.BUTTON.url}
+                  title="Option 2"
+                />
+                <NavbarLinks url="/" title="Option 3" />
+              </NavbarDropDown>
               <NavbarLinks
                 url={ROUTES.COMPONENTS.BUTTON.url}
-                title="Option 2"
+                title="Another link"
               />
-              <NavbarLinks url="/" title="Option 3" />
-            </NavbarDropDown>
-
-            <NavbarLinks
-              url={ROUTES.COMPONENTS.BUTTON.url}
-              title="Another link"
-            />
+            </Nav>
           </Navbar>
         </div>
       </div>
@@ -90,11 +95,58 @@ function NavbarPage() {
         <h3>Placement of navbar</h3>
         <p>fixed?: string = 'top' | 'bottom'</p>
         <Navbar theme="light" linksToRight>
-          <NavbarLinks url="/" title="Home" />
-          <NavbarLinks
-            url={ROUTES.COMPONENTS.BUTTON.url}
-            title={ROUTES.COMPONENTS.BUTTON.title}
+          <NavbarBrand
+            logoSrc="https://placehold.co/90x35?text=Brand+Logo"
+            altText="Brand logo"
           />
+          <Nav>
+            <NavbarLinks url="/" title="Home" />
+            <NavbarLinks
+              url={ROUTES.COMPONENTS.BUTTON.url}
+              title={ROUTES.COMPONENTS.BUTTON.title}
+            />
+          </Nav>
+        </Navbar>
+      </div>
+
+      <div>
+        <h3>Navbar with Logo and title</h3>
+
+        <Navbar theme="light" linksToRight>
+          <NavbarBrand
+            logoSrc="https://placehold.co/90x35?text=Brand+Logo"
+            altText="Brand logo"
+            title="React Custom UI"
+          />
+          <Nav>
+            <NavbarLinks url="/" title="Home" />
+            <NavbarLinks
+              url={ROUTES.COMPONENTS.BUTTON.url}
+              title={ROUTES.COMPONENTS.BUTTON.title}
+            />
+          </Nav>
+        </Navbar>
+      </div>
+
+      <div>
+        <h3>Navbar without brand logo</h3>
+
+        <Navbar theme="light">
+          <Nav>
+            <NavbarLinks url="/" title="Home" />
+            <NavbarLinks
+              url={ROUTES.COMPONENTS.BUTTON.url}
+              title={ROUTES.COMPONENTS.BUTTON.title}
+            />
+            <NavbarDropDown title="Dropdown">
+              <NavbarLinks url="/" title="Option 1" />
+              <NavbarLinks
+                url={ROUTES.COMPONENTS.BUTTON.url}
+                title="Option 2"
+              />
+              <NavbarLinks url="/" title="Option 3" />
+            </NavbarDropDown>
+          </Nav>
         </Navbar>
       </div>
     </>

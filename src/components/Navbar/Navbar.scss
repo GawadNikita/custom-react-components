@@ -10,9 +10,6 @@
   &.navbar-light {
     background-color: $white;
   }
-  &.navbar-links-right {
-    justify-content: space-between;
-  }
   &.navbar-fixed-top {
     position: fixed;
     top: 0;
@@ -27,20 +24,35 @@
     right: 0;
   }
   .navbar-logo {
-    margin-right: 20px;
-  }
-  .navbar-links {
     display: flex;
+    img {
+      margin-right: 20px;
+    }
+    h1 {
+      font-weight: 300;
+      font-size: 24px;
+      text-transform: uppercase;
+      margin-right: 20px;
+    }
+  }
+
+  &.navbar-links-right {
+    justify-content: space-between;
+  }
+
+  .nav-wrapper {
+    display: flex;
+    flex-grow: 1;
     align-items: center;
     line-height: 21px;
-    a {
-      color: $grey;
-      text-decoration: none;
-      margin: 0 5px;
-      &.active,
-      &:hover {
-        color: $primary;
-      }
+  }
+  a {
+    color: $grey;
+    text-decoration: none;
+    margin: 0 5px;
+    &.active,
+    &:hover {
+      color: $primary;
     }
   }
 
@@ -83,7 +95,7 @@
   &.navbar-dark {
     background-color: $black;
     color: $white;
-    .navbar-links {
+    .nav-wrapper {
       a {
         color: $white;
         &.active,

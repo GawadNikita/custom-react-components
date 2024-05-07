@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { NavbarDropdownInterface } from "../../interface/navbar.interface";
 
-const NavbarDropDown = (props: any) => {
+const NavbarDropDown = (props: NavbarDropdownInterface) => {
   const [isDropDownVisibile, setIsDropDownVisibile] = useState(false);
   let dropdownCssClasses = `nav-dropdown-options-wrapper dropdown-hidden`;
   function toggleDropdownOptions(flag: boolean) {
