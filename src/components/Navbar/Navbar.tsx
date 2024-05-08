@@ -1,18 +1,12 @@
-import React from "react";
 import { NavbarInterface } from "../../interface/navbar.interface";
 import "./Navbar.scss";
 
-const Navbar: React.FC<NavbarInterface> = (values: NavbarInterface) => {
-  const cssClass = `navbar-wrapper navbar-${values.theme}`;
+const Navbar = (props: NavbarInterface) => {
+  const linksToRight = props.linksToRight ? "navbar-links-right" : "";
   return (
     <>
-      <div className={cssClass}>
-        <div className="navbar-logo">
-          <img
-            src="https://placehold.co/120x60?text=Brand+Logo"
-            alt="Main brand logo"
-          />
-        </div>
+      <div className={`navbar-wrapper navbar-${props.theme} ${linksToRight}`}>
+        {props.children}
       </div>
     </>
   );

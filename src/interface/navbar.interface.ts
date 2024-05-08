@@ -4,11 +4,28 @@
 
 export interface NavbarInterface {
   theme: string;
-  children?: any; // type to be corrected here
+  linksToRight?: boolean;
+  children?: any;
 }
 
 export interface NavLinksInterface {
   title: string;
   url: string;
   disable?: boolean;
+  children?: any;
+}
+
+export interface NavbarDropdownInterface {
+  title: string;
+  children?: any;
+}
+
+export interface NavbarLogoInterface {
+  logoSrc: string;
+  altText?: string;
+  title?: string;
+}
+
+export interface NavInterface {
+  children: JSX.Element[]
 }
