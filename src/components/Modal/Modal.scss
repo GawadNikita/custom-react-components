@@ -1,0 +1,36 @@
+@import "../../theme-variables";
+dialog {
+  padding: 20px 20px 0;
+  &.modal {
+    border: none;
+    border-radius: 8px;
+    min-width: 600px;
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid $light-grey;
+      padding: 0 10px 20px;
+      h3 {
+        margin: 0;
+        font-size: 25px;
+      }
+      .material-icon {
+        cursor: pointer;
+      }
+    }
+
+    .modal-body {
+      padding: 20px 10px;
+    }
+    .modal-footer {
+      display: flex;
+      justify-content: flex-end;
+      border-top: 1px solid $light-grey;
+      padding: 20px 10px;
+    }
+  }
+}
+
+dialog:-internal-dialog-in-top-layer::backdrop {
+  background: rgba(0, 0, 0, 0.8);
+}
