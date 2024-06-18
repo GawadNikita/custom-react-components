@@ -1,3 +1,4 @@
+import React from "react";
 import { Outlet, useNavigation } from "react-router-dom";
 import SideNavigation from "../components/SideNavigation/SideNavigation";
 function RootLayout() {
