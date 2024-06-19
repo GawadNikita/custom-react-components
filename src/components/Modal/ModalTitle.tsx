@@ -1,3 +1,4 @@
+import React from "react";
 import { ModalTitleInterface } from "../../interface/modal.interface";
 
 const ModalTitle = (props: ModalTitleInterface) => {
