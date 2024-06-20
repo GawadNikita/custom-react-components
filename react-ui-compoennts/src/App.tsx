@@ -1,3 +1,4 @@
+import React from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.scss";
 import ButtonPage from "./pages/ButtonPage";
